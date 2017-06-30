@@ -1,0 +1,9 @@
+[dockerhosts]
+localhost   port=8000
+#server2    port=8001
+#server3    port=8002
+#serverN    port=800...
+
+[dockerhosts:vars]
+ansible_user=user
+ansible_ssh_pass=password

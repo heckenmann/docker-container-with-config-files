@@ -1,0 +1,11 @@
+---
+- name: start docker container without config file
+  hosts: dockerhosts
+  tasks:
+    - name: start logstash
+      docker_container:
+        name: logstash_with_configstring
+        image: logstash:5.4.3
+        command: ["logstash -e \"{{ lookup('template','templates/logstash.conf.j2') }}\""]
+        ports:
+          "{{port}}:{{port}}"

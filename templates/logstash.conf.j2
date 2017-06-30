@@ -1,0 +1,12 @@
+input {
+  tcp {
+    'port' => "{{ port }}"
+  }
+}
+filter {
+}
+output {
+  stdout {
+    codec => json
+  }
+}
