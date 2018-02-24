@@ -17,6 +17,14 @@ In "without-config-file.yml" you can see how to configure an instance of logstas
 * In "with-config-file.yml" the command contains two "commands". The first one writes the config file into the container. The second one executes the program with the information, where the config-file is located. If it's not possible to set the path to the config file, the config-file must be written to the static path in the first command.
 * That's it.
 
+## !!! With config file and docker supported 'config' !!!
+The most elegant way is to use "config" supported by docker in combination with a docker-compose.yml:
+
+https://docs.docker.com/compose/compose-file/#configs
+
+The current version of ansible has no module to manage configs in docker.
+Unfortunately the configs in docker cannot be updated when they change.
+
 ## Execute
 ```
 # Set the host user and password in hosts-file
